@@ -1,0 +1,177 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #0f004a;
+  margin: 0;
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.lighthouse {
+  display: flex;
+  align-self: flex-end;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
+  width: 300px;
+
+  animation: riseup 3s forwards;
+}
+
+.top {
+  height: 100px;
+  width: 150px;
+  background-color: #e7e7e7;
+  display: flex;
+  align-items: flex-end;
+}
+
+.light {
+  width: 50px;
+  height: 75px;
+  background-color: #c4c4c4;
+  margin: 0 auto;
+  position: relative;
+
+  animation: lighton .5s 3s forwards;
+}
+
+.spotlight {
+  position: absolute;
+  top: -350px;
+  left: -75px;
+  opacity: 0;
+
+  animation: fadein .5s 3s forwards;
+}
+
+.post {
+  width: 200px;
+  height: 80vh;
+  background-color: #e7e7e7;
+}
+
+.platform {
+  width: 275px;
+  height: 75px;
+  background-color: #c4c4c4;
+}
+
+.stripe {
+  height: 100px;
+  width: 200px;
+  background-color: #e7e7e7;
+}
+
+.stripe-alt {
+  background-color: #fd6b6b;
+}
+
+.header {
+  align-self: start;
+  margin-top: 5%;
+  opacity: 0;
+  z-index: 10;
+
+  animation: fadein .5s 3s forwards;
+}
+
+.header h1 {
+  font-size: 5em;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.header p {
+  margin-left: 200px;
+  font-size: 3em;
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.card {
+  align-self: start;
+  min-width: 300px;
+  min-height: 300px;
+  width: 400px;
+  height: 300px;
+  background: rgba(231, 231, 231, 0.2);
+  border-radius: 30px;
+  margin-right: 100px;
+  margin-top: 10%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 10;
+  opacity: 0;
+  animation: fadein .5s 3s forwards;
+}
+
+.card input, .card button {
+  background-color: rgba(231, 231, 231, 0.26);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.card input {
+  width: 80%;
+  height: 50px;
+  padding-left: 20px;
+}
+
+.card input::placeholder {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.card input:focus::placeholder {
+  color: transparent;
+}
+
+.card button {
+  width: 150px;
+  height: 50px;
+}
+
+/* Animations */
+@keyframes riseup {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes lighton {
+  from {
+    background-color: #c4c4c4;
+  }
+  to {
+    background-color: #fadf54;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
